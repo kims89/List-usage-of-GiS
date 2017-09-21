@@ -1,76 +1,80 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stromless I Agder</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-    
-    
-    <script>
-        var myURL = "https://www.aenett.no/arcgis/rest/services/Ekstern/DMSPublicStromstansNyeSymboler/MapServer/0/query?f=json&where=1%3D1&returnGeometry=true&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=102100";
-    $.getJSON( myURL, function(data) { 
-        console.log(data.features);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stromless I Agder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+  <script>
+    var myURL =
+      "https://www.aenett.no/arcgis/rest/services/Ekstern/DMSPublicStromstansNyeSymboler/MapServer/0/query?f=json&where=1%3D1&returnGeometry=true&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=102100";
+    $.getJSON(myURL, function (data) {
+      console.log(data.features);
     });
-    </script>
+  </script>
 </head>
+
 <body>
-          
-        <div class="ui raised very padded text container segment">
-                    <h1 class="ui dividing header">
-                        <div class="content">
-                                Strømbrudd i Agder
-                          <div class="sub header">Alle pågående strømbrudd i Agder Energi sitt forsyningsnett vil vises. Alle dataer er hentet fra Agder Energi/Powels APIer </div>
-                        </div>
-                      </h1>
-                      <div class="ui inverted segment">                     
-                <div class="ui yellow inverted statistic">
-                        <div class="value">
-                                <i class="fa fa-users" aria-hidden="true"></i> 550
-                        </div>
-                        <div class="label">
-                          Er berørt av strømbrudd akkurat nå (Agder Energis forsyningsområdet)
-                        </div>
-                      </div>
-                      </div><br>
-                      <div class="ui horizontal divider">
-                            Pågående
-                          </div>
-                      <div class="ui icon negative message">
-                            <i class="notched circle loading icon"></i>
-                            <div class="content">
-                              <div class="header">
-                                For fire timer siden: Planlagt utkobling Lyngdal <a class="ui green label">Planlagt</a>
-                              </div>
-                              <p>Overflytting av abb fra gammel trafo til ny.</p>
-                            </div>
-                          </div>
-                          <div class="ui icon negative message">
-                                <i class="notched circle loading icon"></i>
-                                <div class="content">
-                                  <div class="header">
-                                    Just one second <a class="ui red label">Ikke planlagt</a>
-                                  </div>
-                                  <p>We're fetching that content for you.</p>
-                                </div>
-                              </div>
-
-                              <div class="ui success message">
-                                    <div class="content">
-                                      <div class="header">
-                                        Ingen strømbrudd for øyeblikket!
-                                      </div>
-                                      <p>Jippi!!</p>
-                                    </div>
-                                  </div>
-                              
-              </div>
-
-
+  <div class="ui raised very padded text container segment">
+    <h1 class="ui dividing header">
+      <div class="content">
+        Strømbrudd i Agder
+        <div class="sub header">Alle pågående strømbrudd i Agder Energi sitt forsyningsnett vil vises. Alle dataer er hentet fra Agder Energi/Powels
+          APIer </div>
+      </div>
+    </h1>
+    <div class="ui inverted segment">
+      <div class="ui yellow inverted statistic">
+        <div class="value">
+          <i class="fa fa-users" aria-hidden="true"></i> 550
+        </div>
+        <div class="label">
+          Er berørt av strømbrudd akkurat nå (Agder Energis forsyningsområdet)
+        </div>
+      </div>
+    </div><br>
+    <div class="ui horizontal divider">
+      Pågående
+    </div>
+    <div class="ui icon negative message">
+      <i class="notched circle loading icon"></i>
+      <div class="content">
+        <div class="header">
+          For fire timer siden: Planlagt utkobling Lyngdal <a class="ui green label">Planlagt</a>
+        </div>
+        <p>Overflytting av abb fra gammel trafo til ny. Overflytting av abb fra gammel trafo til ny. Overflytting av abb fra
+          gammel trafo til ny.</p>
+        <div class="ui label">
+          Kunder uten strøm
+          <div class="detail">214</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui icon negative message">
+      <i class="notched circle loading icon"></i>
+      <div class="content">
+        <div class="header">
+          Just one second <a class="ui red label">Ikke planlagt</a>
+        </div>
+        <p>We're fetching that content for you.</p>
+      </div>
+    </div>
+    <div class="ui success message">
+      <div class="content">
+        <div class="header">
+          Ingen strømbrudd for øyeblikket!
+        </div>
+        <p>Jippi!!</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
